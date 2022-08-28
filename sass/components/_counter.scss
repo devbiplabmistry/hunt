@@ -1,0 +1,69 @@
+#counter {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../images/counter.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include pgap(0px, 0px, 10px, 10px);
+
+    .counter-wrapper {
+        transform: rotate(-2deg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .counter-item {
+            @include mgap(0px, 24px, 30px, 30px);
+            transform: skew(-10deg);
+            width: 244px;
+            @include pgap(0px, 0px, 25px, 25px);
+            border: 1px solid $colorregular;
+
+            h4 {
+                @include font('Raleway', 30px, 500, $colorregular);
+                margin-bottom: 15px;
+                transform: rotate(2deg);
+            }
+
+            p {
+                @include font('Raleway', 20px, 500, $colorregular);
+                transform: rotate(2deg);
+            }
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+        }
+    }
+
+    .counter-shape {
+        position: relative;
+
+        .top-counter-shape {
+            position: absolute;
+            transform: skewX(-88deg);
+            transform-origin: top left;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: $colorregular;
+        }
+    }
+
+    .bottom-counter-shape {
+        position: relative;
+
+        .bottom-counter-shape {
+            position: absolute;
+            transform: skewX(-88deg);
+            transform-origin: bottom right;
+            top: -190px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: $colorregular;
+        }
+    }
+
+}

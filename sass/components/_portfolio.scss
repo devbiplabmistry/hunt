@@ -1,0 +1,66 @@
+#portfolio {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/portfolioimg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    .port-header {
+        h4 {
+            @include font('Raleway', 35px, 400, $colorregular);
+        }
+
+        p {
+            @include font('Open Sans', 14px, 400, $paracolor);
+            line-height: 24px;
+            padding: 0 17px;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+    }
+
+    height: 100%;
+
+    .port-item {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.port-top-shape {
+    margin-top: 20px;
+    position: relative;
+
+    .port-shape {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        transform: skewX(-87deg);
+        transform-origin: left top;
+        z-index: 999;
+    }
+}
+
+.port-bottom {
+    position: relative;
+
+    .port-bottom-shape {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background-color: #fff;
+        top: -200px;
+        left: 0;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+        z-index: 999;
+    }
+}

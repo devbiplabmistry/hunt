@@ -1,0 +1,52 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $hovercolor;
+    z-index: 9999;
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                padding-left: 0;
+                padding-right: 0;
+                text-transform: capitalize;
+                @include font('Open Sans', 16px, 500, $colorregular);
+                position: relative;
+                transition: all linear .3s;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    bottom: -19px;
+                    left: 0;
+                    background-color: $hovercolor;
+                    transform: scale(0, 1);
+                    transform-origin: right, center;
+                    transition: all linear .3s;
+                }
+
+                &:hover {
+                    color: $hovercolor;
+
+                    &::after {
+                        transform: scale(1, 1);
+                        transform-origin: left, center;
+                    }
+                }
+
+            }
+
+            @include pgap(22px, 22px, 0, 0);
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+
+        }
+    }
+}

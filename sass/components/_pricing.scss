@@ -1,0 +1,137 @@
+#pricing {
+    .pricing-head {
+        h3 {
+            @include font('Raleway', 35px, 400, $headingcolor);
+            line-height: 24px;
+            @include mgap(0px, 0px, 0px, 25px);
+        }
+
+        p {
+            @include font('Open Sans', 14px, 400, $headparacolor);
+            line-height: 24px;
+            padding: 0 10px;
+        }
+    }
+
+    .pricing-item {
+        background-color: $paracolor;
+        position: relative;
+
+        .pricing-top {
+            width: 100%;
+            height: 140px;
+            background-color: $headparacolor;
+            clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+
+            h3 {
+                transition: all linear .3s;
+                text-transform: uppercase;
+                @include font('Raleway', 20px, 500, $colorregular);
+                @include pgap(0px, 0px, 30px, 0px)
+            }
+        }
+
+        .inner-pricing-top {
+            transition: all linear .3s;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid $headparacolor;
+            background-color: $paracolor;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .inner-circle {
+                transition: all linear .3s;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                background-color: $headparacolor;
+            }
+
+            .inner-circle-text {
+                h5 {
+                    @include font('Raleway', 29px, 400, $colorregular);
+                    transition: all linear .3s;
+                }
+
+                p {
+                    @include font('Raleway', 12px, 300, $colorregular);
+                    transition: all linear .3s;
+                }
+            }
+        }
+
+        .pricing-details {
+            padding-top: 30px;
+
+            ul {
+                li {
+                    a {
+                        @include font('Open Sans', 14px, 400, $headparacolor);
+
+                    }
+                }
+            }
+        }
+
+        .join {
+            transition: all linear .3s;
+            height: 80px;
+            background-color: $headparacolor;
+            clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+
+            h3 {
+                @include font('Raleway', 16px, 500, $colorregular);
+                text-transform: uppercase;
+                @include pgap(0px, 0px, 45px, 0px);
+                transition: all linear .3s;
+            }
+        }
+    }
+
+    .price {
+        @include mgap(0px, 0px, 60px, opx)
+    }
+
+    .pricing-main {
+        &:hover {
+            .pricing-top {
+                background-color: $primarybg;
+
+                h3 {
+                    color: $btntextcolor;
+                }
+            }
+
+            .inner-circle {
+                background-color: $primarybg;
+
+                .inner-circle-text {
+                    h5 {
+                        color: $btntextcolor;
+                    }
+
+                    p {
+                        color: $btntextcolor;
+                    }
+                }
+            }
+
+            .join {
+                background-color: $primarybg;
+
+                h3 {
+                    color: $btntextcolor;
+                }
+            }
+        }
+    }
+
+}

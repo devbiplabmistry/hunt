@@ -1,0 +1,273 @@
+#about {
+    .common-header {
+        margin-top: -152px;
+
+        h3 {
+            @include font('raleway', 35px, 400, $headingcolor);
+            line-height: 24px;
+            margin-bottom: 25px
+        }
+
+        p {
+            font-family: "opensans";
+            font-size: 14px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 24px;
+            padding: 0 70px;
+        }
+    }
+
+    .top-about-shadow {
+        position: relative;
+
+        .top-circle {
+            transition: all linear .3s;
+            position: absolute;
+            top: 225px;
+            left: 172px;
+            width: 20px;
+            height: 20px;
+            background-color: $circlecolor;
+            border-radius: 50%;
+        }
+    }
+
+    .top-left-shadow {
+        position: relative;
+
+        .top-left-circle {
+            transition: all linear .3s;
+            position: absolute;
+            top: 90px;
+            left: 373px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $circlecolor;
+        }
+    }
+
+    .top-right-shadow {
+        position: relative;
+
+        .top-right-circle {
+            transition: all linear .3s;
+            position: absolute;
+            top: 90px;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $circlecolor;
+        }
+    }
+
+    .top-bottom-shadow {
+        position: relative;
+
+        .top-bottom-circle {
+            transition: all linear .3s;
+            position: absolute;
+            top: -43px;
+            left: 167px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $circlecolor;
+        }
+    }
+
+
+    .top-about {
+        transition: all linear .3s;
+        position: relative;
+        @include pgap(35px, 35px, 35px, 25px);
+
+        h4 {
+            @include font('raleway', 18px, 500, $headingcolor);
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+
+        p {
+            @include font('opensans', 14px, 400, $headparacolor);
+            line-height: 24px;
+            padding: 0 10px;
+        }
+
+        background-color: $ashcolor;
+
+        .top-design {
+            position: absolute;
+            top: 175px;
+            background-color: $ashcolor;
+            width: 40px;
+            height: 40px;
+            left: 50%;
+            transform: translateX(-50%) rotate(40deg);
+
+        }
+
+    }
+
+    .mid-left {
+        transition: all linear .3s;
+        @include mgap(0, 5px, 0, 0);
+        position: relative;
+        @include pgap(35px, 35px, 35px, 25px);
+
+        h4 {
+            @include font('raleway', 18px, 500, $headingcolor);
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+
+        p {
+            @include font('opensans', 14px, 400, $headparacolor);
+            line-height: 24px;
+            padding: 0 10px;
+        }
+
+        background-color: $ashcolor;
+
+        .left-top-design {
+            position: absolute;
+            background-color: $ashcolor;
+            width: 40px;
+            height: 40px;
+            transform: translateY(-50%) rotate(40deg);
+            left: 324px;
+            top: 50%;
+        }
+    }
+
+    .mid-middle {
+        margin-top: 31px;
+        margin-bottom: 31px;
+
+        .mid-circle {
+            width: 370px;
+            height: 370px;
+            border-radius: 50%;
+            border: 1px solid $circlecolor;
+
+            .mid-inner-circle {
+                width: 320px;
+                height: 320px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+        }
+    }
+
+    .mid-right {
+        transition: all linear .3s;
+        @include mgap(18px, 0, 0, 0);
+        position: relative;
+        @include pgap(35px, 35px, 35px, 25px);
+
+        h4 {
+            @include font('raleway', 18px, 500, $headingcolor);
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+
+        p {
+            @include font('opensans', 14px, 400, $headparacolor);
+            line-height: 24px;
+            padding: 0 10px;
+        }
+
+        background-color: $ashcolor;
+
+        .right-top-design {
+            position: absolute;
+            background-color: $ashcolor;
+            width: 40px;
+            height: 40px;
+            transform: translateY(-50%) rotate(40deg);
+            left: -10px;
+            top: 50%;
+
+        }
+    }
+
+    .bottom-about {
+        transition: all linear .3s;
+        transition: all linear .3s;
+        position: relative;
+        @include pgap(35px, 35px, 35px, 25px);
+
+        h4 {
+            @include font('raleway', 18px, 500, $headingcolor);
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+
+        p {
+            @include font('opensans', 14px, 400, $headparacolor);
+            line-height: 24px;
+            padding: 0 10px;
+        }
+
+        background-color: $ashcolor;
+
+        .bottom-top-design {
+            position: absolute;
+            background-color: $ashcolor;
+            width: 40px;
+            height: 40px;
+            transform: translateX(-50%) rotate(40deg);
+            left: 50%;
+            top: -10px;
+        }
+    }
+
+
+    .top-about-shadow:hover {
+        .top-about {
+            filter: drop-shadow(0px 5px 5px #eeeeee);
+        }
+
+        .top-circle {
+            background-color: $primarybg;
+        }
+    }
+
+    .top-left-shadow:hover {
+        .mid-left {
+            filter: drop-shadow(0px 5px 5px #eeeeee);
+        }
+
+        .top-left-circle {
+            background-color: $primarybg;
+        }
+    }
+
+    .top-right-shadow:hover {
+        .mid-right {
+            filter: drop-shadow(0px 5px 5px #eeeeee);
+        }
+
+        .top-right-circle {
+            background-color: $primarybg;
+        }
+    }
+
+    .top-bottom-shadow:hover {
+        .bottom-about {
+            filter: drop-shadow(0px 5px 5px #eeeeee);
+        }
+
+        .top-bottom-circle {
+            background-color: $primarybg;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+#market {
+    @include pgap(0px, 0px, 50px, 7px);
+    background-color: $paracolor;
+
+    .market-wrapper {
+        transform: rotate(-1deg);
+
+        .market-item {
+            transition: all linear .3s;
+            width: 244px;
+            border: 1px solid #ccc;
+            @include pgap(0px, 0px, 35px, 35px);
+            @include mgap(0px, 24px, 0px, 0px);
+
+            &:last-child {
+                @include mgap(0px, 0px, 0px, 0px);
+            }
+
+            &:hover {
+                border-color: $primarybg;
+            }
+
+        }
+    }
+
+}

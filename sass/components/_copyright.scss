@@ -1,0 +1,16 @@
+#copyright {
+    background-color: $headparacolor;
+    @include pgap(0px, 0px, 20px, 20px);
+
+    .copyright {
+        h4 {
+            @include font('Lato', 13px, 400, $paracolor);
+
+            span {
+                color: $primarybg;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}

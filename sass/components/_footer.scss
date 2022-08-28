@@ -1,0 +1,126 @@
+#footer {
+    background-color: $btntextcolor;
+    @include pgap(0px, 0px, 50px, 30px);
+
+    .footer-item {
+        margin-top: 100px;
+
+        .f-contain {
+            p {
+                @include font('Raleway', 16px, 500, $colorregular);
+                line-height: 24px;
+            }
+
+            .a {
+                margin-top: 15px;
+
+            }
+        }
+
+        .f-logo {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: $hovercolor;
+            line-height: 35px;
+
+        }
+
+    }
+
+    .footer-top-shape {
+        position: relative;
+
+        .footer-top-inner {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: $servicecolor;
+            transform: skewX(-88deg);
+            transform-origin: top center;
+        }
+    }
+
+    .footer-bottom {
+        .footer-bottom-header {
+            h3 {
+                @include font('Raleway', 20px, 500, $colorregular);
+                text-transform: uppercase;
+                @include mgap(0px, 0px, 60px, 30px)
+            }
+
+        }
+
+        .footer-bottom-icon {
+            margin-bottom: 20px;
+
+            i {
+                transition: all linear .3s;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                color: #475239;
+                background-color: $colorregular;
+                line-height: 40px;
+                margin-right: 25px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    background-color: $primarybg;
+                }
+            }
+        }
+    }
+
+    .after {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 100px;
+            background-color: #555;
+            top: 100px;
+            left: 0;
+        }
+    }
+
+    .footer-shape {
+        position: relative;
+
+        .inner-footer-shape {
+            position: absolute;
+            top: -170px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: $btntextcolor;
+            transform: skew(88deg);
+            transform-origin: bottom center;
+        }
+    }
+
+    .footer-head-bottom-shape {
+        position: relative;
+        transform: rotate(-3deg);
+
+        .f-h-s {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: $headparacolor;
+            top: 100px;
+            left: 0;
+
+        }
+
+
+    }
+
+}
